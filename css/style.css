@@ -12,7 +12,7 @@ ul li { margin:0; padding:0; list-style:none; }
     background-size:cover;
 }
 .container { max-width:1160px; width:auto; margin:0 auto; }
-.banner-top {  width:auto; min-height: 677px; overflow:hidden; }
+.banner-top {  width:100%; min-height: 677px; overflow:hidden; }
 .banner-top2 { background: url(../images/banner-top-bg.jpg); width: auto; padding:40px 0 120px 0; margin:0 0 -85px 0; }
 .logo { float:left; width:230px; height:48px; margin:20px 0 40px 0; display:block}
 .logo img { width:100%}
@@ -24,10 +24,10 @@ ul.social li { float: right; margin:0 0 0 12px; }
 .dif-size { max-width:1160px !important;}
 .content-left { max-width:679px; width:auto; padding-top:103px;}
 .content-left h1 { font-size:52px; line-height:60px; padding:10px 0 10px 0; letter-spacing: -1px;}
-img.imac { position:absolute; right:-200px; top:75px;}
+img.imac { position:absolute; right:-1px; top:175px;}
 h1 { font-family: 'proxima_novalight'; color:#fff; text-align:center;}
 .banner-top2 .content p { font-size: 24px; color: #e0e0e0; line-height: 30px; font-family: 'proxima_novalight'; text-align: center; }
-.banner-top .content p { font-size:24px; color:#e0e0e0; line-height:30px; font-family: 'proxima_novalight'; text-align:center; }
+.banner-top .content p { font-size:24px; color:#fff; line-height:30px; font-family: 'proxima_novalight'; text-align:center; }
 /*
 #contact-form { margin:0 auto; width:549px; padding:35px 0 45px 0;}
 form input.input { background:url(../images/input-bg.png) no-repeat; width:388px; height:33px; font-style:italic; padding: 14px 25px; font-family: 'merriweatherregular'; color:#595959; font-size:21px; border:none; float:left;}
