@@ -1,0 +1,17 @@
+.header { height:auto}
+ul.social { margin:80px 0 15px 0}
+
+.content { padding:0 20px}
+.content-left h1 { padding-top:0}
+.your img { max-width:774px; width:100%}
+
+.awards { display:none}
+
+img.imac { max-width:683px; width:100%}
+
+.left-text { width:54%}
+.right-text { width:54%}
+.left-text h3, .right-text h3 { padding:15px 0 15px 0 !important}
+
+.img-right img, .img-left img { margin:0 0 30px 0!important; max-width:297px; width:100%}
+.backlink-content h1, .backlink-content h2 { font-size:36px;}
