@@ -5,7 +5,17 @@ img { border:none;}
 form { margin:0; padding:0; }
 ul { margin:0; padding:0; list-style:none; }
 ul li { margin:0; padding:0; list-style:none; }
-.header { width:100%; height:100px; border-bottom:1px solid #292b31 }
+.header { width:100%; height:100px;
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 0;
+    background-color: rgba(41, 31, 35, 0.54);
+    border-bottom:1px solid #292b31 }
 .fondo{
     background:url(../images/fondo@1x.png);
     background-repeat: no-repeat; 
@@ -20,10 +30,10 @@ ul.social { float:right; margin:40px 0; }
 ul.social li { float: right; margin:0 0 0 12px; }
 .header p.phone { float:right; margin:44px 0 0 0; font-family: 'proxima_novalight'; color:#fff; font-size:24px; line-height:36px; * margin:-80px 155px 0 0; }
 .header p.phone a, .header p.phone span { font-family: 'proxima_nova_rgbold'; text-decoration:none; color:#fff; padding:0 0 0 21px; margin:0 0 0 11px; background:url(../images/phone-ico.png) no-repeat; }
-.content { max-width:764px; width:auto; margin:0 auto; position:relative;}
+.content { max-width:764px; width:auto; margin:0 auto; position:relative; padding-bottom: 30px}
 .dif-size { max-width:1160px !important;}
 .content-left { max-width:679px; width:auto; padding-top:103px;}
-.content-left h1 { font-size:52px; line-height:60px; padding:10px 0 10px 0; letter-spacing: -1px;}
+.content-left h1 { font-size:52px; line-height:60px; padding:40px 0 10px 0; letter-spacing: -1px;}
 img.imac { position:absolute; right:-1px; top:175px;}
 h1 { font-family: 'proxima_novalight'; color:#fff; text-align:center;}
 .banner-top2 .content p { font-size: 24px; color: #e0e0e0; line-height: 30px; font-family: 'proxima_novalight'; text-align: center; }
@@ -49,8 +59,36 @@ h3 { padding:105px 0 25px 0; font-family: 'proxima_nova_rgregular'; font-size:30
 .content p { color:#595959; font-size:18px; line-height:27px; font-family: 'proxima_nova_rgregular'; }
 .btn { background:url(../images/btn-get.png) no-repeat; margin:0 auto; padding:0; display:block; width:387px; height:63px; }
 .btn2 { background:url(../images/btn-get2.png) no-repeat; margin:0 auto; padding:0; display:block; width:387px; height:63px; }
-.yellow { background:#ffe726; width:100%; margin:80px 0 0 0; padding:0px 0 80px 0; }
-h4 { padding: 0 0 40px 0; font-family: 'proxima_nova_rgregular'; font-size:30px; line-height:33px; color:#040707; text-align:center; }
+.yellow { background:#44bbff; width:100%; margin:0px 0 0 0; padding:0px 0 80px 0; }
+#blanqueame{
+    color: white;
+}
+.yellow p{
+    color: #ffffff;
+}
+.yellow h3{
+    color: #ffffff;
+}
+.yellow h2{
+    color: #ffffff;
+}
+.yellow li{
+    color: white;
+}
+.not-yellow { background:#207cca; width:100%; margin:0px 0 0 0; padding:0px 0 80px 0; }
+.not-yellow p{
+    color: #ffffff;
+}
+.not-yellow h3{
+    color: #ffffff;
+}
+.not-yellow h2{
+    color: #ffffff;
+}
+.not-yellow li{
+    color: white;
+}
+h4 { padding: 10px 0 0px 0; font-family: 'proxima_nova_rgregular'; font-size:30px; line-height:33px; color:#040707; text-align:left; color: white;}
 ul.logos { margin:0 0 30px 0; padding:0; float:left; }
 ul.logos li { float:left; margin:0; }
 ul.logos li:first-child { margin:0; }
@@ -179,7 +217,7 @@ left:0
 }
 .backlink-content h1, .backlink-content h2 { font-size:37px;font-family: 'proxima_nova_rgbold'; color:#040707; padding:80px 0 30px;}
 .content.backlink-content h2 {text-align:center}
-.backlink-content p { padding-bottom:25px;}
+.backlink-content p { padding-bottom:5px;}
 .your { position:relative; width:382px; margin-top:0px; padding-top:0px;}
 .your img { position:absolute; left:382px; top:0;}
 .yellow ul { padding-top:25px;}
