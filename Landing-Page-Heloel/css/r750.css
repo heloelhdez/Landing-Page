@@ -1,0 +1,20 @@
+#full-form textarea { width:240px; height:150px; display:block; margin:0 auto; font-size:15px}
+#full-form .item { float:none; margin:0 auto 20px auto !important}
+#full-form input[type=text] { margin:0 auto !important; display:block; width:240px; height:40px; line-height:40px; font-size:15px}
+
+.yellow ul { padding:0 0 20px 0 !important}
+.yellow ul li { float:none; width:auto; margin-bottom:20px !important}
+
+.contact-form input.input { width:265px}
+.contact-form { width:422px; margin:0 auto; padding-left:0; padding-right:0}
+.left-text { float:none; width:auto}
+.right-text { float:none; width:auto}
+.left-text h3, .right-text h3 { padding:15px 0 15px 0 !important}
+.img-right { float:none}
+.img-left { float:none}
+.img-right img, .img-left img { margin:0 auto 30px!important; max-width:297px; width:100%; display:block}
+h3 { font-size:25px;}
+.blue .container2 h1{  font-size: 40px; line-height: 39px;}
+.pink .container2 h2 { font-size:30px}
+a.logo { width:190px}
+label.error { margin: 2px 0 -16px; text-align: center;}

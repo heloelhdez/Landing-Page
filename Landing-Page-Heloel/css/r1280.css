@@ -1,0 +1,22 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.content-left { width:auto !important; margin:0 auto}
+.content-left h1 { padding-top:40px}
+.imac { float:none; position:static !important; margin:0 auto; display:block}
+
+.your { width:auto !important}
+.your img { position:static; display:block; margin: 0 auto 20px auto}
+
+.container, .container2 { padding:0 20px}
+
+#full-form { width:auto !important}
+#full-form input[type="text"] { width:282px}
+#full-form .item.last input[type="text"] { margin-right:0}
+#full-form textarea { width:626px;}

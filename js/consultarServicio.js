@@ -95,7 +95,6 @@ $(function() {
                     serviceValue = daycareValue;
                     cost = 40 + (size * 20);
                     if (size == 4) {
-                        var cost = 0;
                         cost = cost - 10;
                     }
                     break;
