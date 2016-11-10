@@ -34,7 +34,9 @@
         <div class="container">
 
             <div class="navbar-header">
-                <a class="navbar-brand" href="#" style="padding: 0px; margin:8px;"><img class="img-responsive" src="img/LOGO.png" style="height:48px; width:auto;"></a>
+                <a class="navbar-brand" href="#" style="padding: 0px; margin:8px;">
+                    <img class="img-responsive" src="img/LOGO.png" style="height:48px; width:auto;">
+                </a>
             </div>
 
         </div>
@@ -44,36 +46,34 @@
         <div class="container">
             <div class="row">
                 
-                <div class="col-sm-9">
+                <div class="col-sm-8">
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1>
                                 ¡Atiende a tu perro sin importar en donde estés y se parte de cada momento inolvidable!
                             </h1>
-                            <p><strong>Prueba nuestros precios con el siguiente cuestionario:</strong></p>
-                            <span id="alertCons">
-                            </span>
+                            <p><strong>Consulta nuestros servicios con el siguiente cuestionario:</strong></p>
                             <form>
                                 <div class="form-group">
                                     <label class="main-label" for="sizeChoice">Tamaño de tu mascota: </label>
                                     <div class="btn-group" data-toggle="buttons" id="sizeChoise">
-                                        <label class="btn btn-outline">
+                                        <label class="btn btn-outline" data-toggle="tooltip" data-placement="top" title="Pug, Chihuahua, Terrier, ...">
                                             <input type="radio" name="size" id="smallBtn" autocomplete="off">Pequeño
                                         </label>
-                                        <label class="btn btn-outline">
+                                        <label class="btn btn-outline" data-toggle="tooltip" data-placement="top" title="Cocker, Beagel, Bulldog, ...">
                                             <input type="radio" name="size" id="mediumBtn" autocomplete="off">Mediano
                                         </label>
-                                        <label class="btn btn-outline">
+                                        <label class="btn btn-outline" data-toggle="tooltip" data-placement="top" title="Labrador, Golden Retriever, Husky, ...">
                                             <input type="radio" name="size" id="bigBtn" autocomplete="off">Grande
                                         </label>
-                                        <label class="btn btn-outline">
+                                        <label class="btn btn-outline" data-toggle="tooltip" data-placement="top" title="Pastor Aleman, Pointer, San Bernardo, ...">
                                             <input type="radio" name="size" id="extraBtn" autocomplete="off">Extra-Grande
                                         </label>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="main-label" for="serviceChoice">Servicio que buscas: </label>
+                                    <label class="main-label" for="serviceChoice">Servicio de interés: </label>
                                     <div class="btn-group" data-toggle="buttons" id="serviceChoise">
                                         <label class="btn btn-outline">
                                             <input type="radio" name="service" id="paseoBtn" autocomplete="off">Paseo
@@ -97,48 +97,40 @@
                                 </div>
 
                                 <div class="form-group" id="paseogroup" hidden>
-                                    <label class="main-label" for="paseoVal">Duración del paseo: </label>
+                                    <label class="main-label" for="paseoVal">Tiempo de paseo: </label>
                                     <span class="hlp">30 min</span>
                                     <input id="paseoVal" type="text" data-slider-min="30" data-slider-max="120" data-slider-step="15" data-slider-value="30"/>
                                     <span class="hlp">120 min</span>
                                     <br>
-                                    <small class="hlp">Para cuidados de más de 12 horas, contactanos y te atenderemos personalmente.</small>
+                                    <small class="hlp">Para paseos de más de 2 horas, contáctanos y te atenderemos personalmente.</small>
                                 </div>
 
                                 <div class="form-group" id="hotelgroup" hidden>
-                                    <label class="main-label" for="hotelVal">Dias de estadía </label>
+                                    <label class="main-label" for="hotelVal">Noches de estadía: </label>
                                     <span class="hlp">1</span>
                                     <input id="hotelVal" type="text" data-slider-min="1" data-slider-max="7" data-slider-step="1" data-slider-value="1"/>
                                     <span class="hlp">7</span>
                                     <br>
-                                    <small class="hlp">Para cuidados de más de una semana, contactanos y te atenderemos personalmente.</small>
+                                    <small class="hlp">Para hospedajes de más de una semana, contáctanos y te atenderemos personalmente.</small>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="main-label" for="mailInput">Dejanos tu correo y te contactaremos</label>
+                                    <label class="main-label" for="mailInput">Te invitamos a dejar tu correo para una experiencia más personalizada.</label>
                                     <br>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control input-outline" id="mailInput" placeholder="correo eletrónico">
+                                        <input type="text" class="form-control input-outline" id="mailInput" placeholder="correo@ejemplo.com">
                                     </div>
                                 </div>
                                 <div class="col-md-12" style="margin-top:8px;">
-                                    <button type="button" class="btn btn-outline btn-xl btn-trans" id="checkBtn">Cotizar</button>
+                                    <button type="button" class="btn btn-outline btn-xl btn-trans" id="checkBtn">Consultar</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-sm-3">
-                    <div class="device-container">
-                        <div class="device-mockup galaxy_s5 portrait">
-                            <div class="device">
-                                <div class="screen">
-                                    <img src="img/screen.png" class="img-responsive" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-sm-4">
+                    <img src="img/appView.png" class="img-responsive pull-down" alt="">
                 </div>
                 
             </div>
@@ -157,92 +149,101 @@
         </div>
     </section>
 
-    <!-- Segunda sección-->
-    <section id="features" class="features">
+    <!--Sección servicios-->
+    <section class="features">
         <div class="container">
             
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h2>¿Tu perro esta solo en casa?</h2>
+                        <h2>¿Tu perro está solo en casa?</h2>
                         <p class="text-muted">Ponemos a tu disposición nuestros servicios de paseo y hospedaje para perros.</p>
-                        <hr>
                     </div>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-md-12">
-                    <div class="container-fluid">
-                        <div class="row">
-                            
-                            <div class="col-md-4">
-                                <div class="feature-item">
-                                    <center><img class="img-responsive" src="img/iconPaseo.png"></center>
-                                    <h3>¡Vamos a pasear!</h3>
-                                    <p class="text-muted">Mediante nuestro servicio de paseo nos encargaremos de mantener a tu compañero en forma y saludable.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="feature-item">
-                                    <center><img class="img-responsive" src="img/iconAlojamiento.png"></center>
-                                    <h3>¿Tiempo de descansar?</h3>
-                                    <p class="text-muted">Con nuestro servicio de Hospedaje podrás salir de viaje sin preocuparte por tu perro, recibirá los mismos cuidados y libertad que en tu casa.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="feature-item">
-                                    <center><img class="img-responsive" src="img/iconCuidado.png"></center>
-                                    <h3>¿Tu perro se queda solo cuando trabajas?</h3>
-                                    <p class="text-muted">El servicio de guardería te permitirá mantener contacto con tu mascota y alegrarte el dia durante esas cansadas jornadas de trabajo.</p>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-item">
+                            <center><img class="img-responsive" src="img/iconPaseo.png"></center>
+                            <h3>¡Vamos a pasear!</h3>
+                            <p class="text-muted">Mediante nuestro servicio de paseo nos encargaremos de mantener a tu compañero en forma y saludable.</p>
                         </div>
-                        
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="feature-item">
-                                    <center><img class="img-responsive" src="img/iconCertificacion.png"></center>
-                                    <h3>Cuidadores certificados</h3>
-                                    <p class="text-muted">Comprobamos los servicios y perfiles de nuestros cuidadores para garantizar seguridad y confianza.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="feature-item">
-                                    <center><img class="img-responsive" src="img/iconSalud.png"></center>
-                                    <h3>Asistencia Veterinaria</h3>
-                                    <p class="text-muted">Atención veterinaria de emergencia durante el servicio en caso de ser necesario.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="feature-item">
-                                    <center><img class="img-responsive" src="img/iconContacto.png"></center>
-                                    <h3>Comunicación</h3>
-                                    <p class="text-muted">Comunicación con la mascota y el cuidador en todo momento.</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-item">
+                            <center><img class="img-responsive" src="img/iconAlojamiento.png"></center>
+                            <h3>¿Tiempo de descansar?</h3>
+                            <p class="text-muted">Con nuestro servicio de hospedaje podrás salir de viaje sin preocuparte por tu perro, recibirá los mismos cuidados y libertad que en tu casa.</p>
                         </div>
-                        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-item">
+                            <center><img class="img-responsive" src="img/iconCuidado.png"></center>
+                            <h3>¿Tu perro se queda solo cuando trabajas?</h3>
+                            <p class="text-muted">El servicio de guardería te permitirá mantener contacto con tu mascota y alegrarte el día durante esas cansadas jornadas de trabajo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Sección garantías-->
+    <section class="features bg-primary">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>¿Aún no estas seguro?</h2>
+                        <p class="text-muted" style="color:#fff;">Garantizamos que tu experiencia con nuestros cuidadores será de calidad.</p>
                     </div>
                 </div>
             </div>
             
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <center><img class="img-responsive" src="img/iconCertificacion.png"></center>
+                        <h3>Cuidadores certificados</h3>
+                        <p class="text-muted" style="color:#fff;">Comprobamos los servicios y perfiles de nuestros cuidadores para garantizar seguridad y confianza.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <center><img class="img-responsive" src="img/iconSalud.png"></center>
+                        <h3>Asistencia Veterinaria</h3>
+                        <p class="text-muted" style="color:#fff;">Atención veterinaria de emergencia durante el servicio en caso de ser necesario.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <center><img class="img-responsive" src="img/iconContacto.png"></center>
+                        <h3>Comunicación</h3>
+                        <p class="text-muted" style="color:#fff;">Comunicación con tu mascota y el cuidador en todo momento.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!--Sección sitio web-->
     <section class="cta">
         <div class="cta-content">
             <div class="container">
                 <h3>¿Te gustaría ser de los primeros en recibir nuestros servicios?</h3>
-                <center><a href="http://www.nannydogsite.com.mx/" class="btn btn-outline btn-xl">Ir al sitio Web!</a></center>
+                <center><a href="http://www.nannydogsite.com/" class="btn btn-outline btn-xl">¡REGISTRATE AHORA!</a></center>
             </div>
         </div>
         <div class="overlay"></div>
     </section>
 
+    <!--Seccion redes sociales-->
     <section id="contact" class="contact bg-primary">
         <div class="container">
-            <h2>Encuentranos en redes sociales!</h2>
+            <h2>¡Encuentranos en redes sociales!</h2>
             <ul class="list-inline list-social">
                 <li class="social-facebook">
                     <a href="https://www.facebook.com/NannyDogMX/"><i class="fa fa-facebook"></i></a>
@@ -251,6 +252,7 @@
         </div>
     </section>
 
+    <!--Footer-->
     <footer>
         <div class="container">
             <p>Derechos Reservados &copy;. 2016 NannyDog.</p>
@@ -259,11 +261,25 @@
                     <a href="#">Privacidad</a>
                 </li>
                 <li>
-                    <a href="#">Terminos y Condiciones</a>
+                    <a href="#">Términos y Condiciones</a>
                 </li>
             </ul>
         </div>
     </footer>
+    
+    <!--Modal de cotización-->
+    <div class="modal fade" id="modalCost" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span id="modaltitle">
+                    </span>
+                    <span id="modalcontent">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>

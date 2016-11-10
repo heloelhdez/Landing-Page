@@ -1,5 +1,14 @@
 $(function() {
     
+    //POSIICONA ELEMENTO AL FONDO DEL PARENT
+    $('.pull-down').each(function() {
+        var $this = $(this);
+        $this.css('margin-top', $this.parent().height() - $this.height())
+    });
+        
+    //ACTIVA TOOLTIPS
+    $('[data-toggle="tooltip"]').tooltip();
+    
     //PREPARA LOS SLIDER
     $('#daycareVal').slider({
         formatter: function(value) {
@@ -20,13 +29,14 @@ $(function() {
     });
         
     //VARIABLE PARA NOMBRE DEL SERVICIO
-    var service = 0;
+    var service = 0, serv = "";
 
     $('#paseoBtn').focusin(function() {
         $('#daycaregroup').hide();
         $('#hotelgroup').hide();
         $('#paseogroup').show();
         service = 1;
+        serv = "paseo";
     });
     
     $('#guardBtn').focusin(function() {
@@ -34,6 +44,7 @@ $(function() {
         $('#paseogroup').hide();
         $('#daycaregroup').show();
         service = 2;
+        serv = "guardería";
     });
 
     $('#hotelBtn').focusin(function() {
@@ -41,35 +52,47 @@ $(function() {
         $('#paseogroup').hide();
         $('#hotelgroup').show();
         service = 3;
+        serv = "hospedaje";
     });
 
-    var size = 0;
+    var size = 0, tam = "";
     
     //SELECCION DE TAMAÑO DE MASCOTA
     $('#smallBtn').focusin(function() {
         size = 1;
+        tam = "pequeño";
     });
 
     $('#mediumBtn').focusin(function() {
         size = 2;
+        tam = "mediano";
     });
     
     $('#bigBtn').focusin(function() {
         size = 3;
+        tam = "grande";
     });
     
     $('#extraBtn').focusin(function() {
         size = 4;
+        tam = "extra grande";
     });
     
     $('#checkBtn').on('click', function (e) {
         
+        //OBTIENE VALOR INGRESADO EN MAIL
         var mail = $('#mailInput').val();
         
+        //CHECA QUE NO HAY CAMPOS VACIOS
         if (mail != "" && service != 0 && size != 0) {
                     
-            $('#alertCons').html('<div class="alert alert-info" role="alert" style="padding: 8px 16px;">Cotizando...</div>');
+            //AVIZA QUE COMIENZA A ENVIAR DATOS
+            $('#modaltitle').html('<h3>¡Gracias por tu interés!</h3>');
+            $('#modalcontent').html('<p>Estamos procesando tu solicitud<br>...</p>');
+            
+            $('#modalCost').modal('show');
 
+            //OBTIENE EL VALOR INGRESADO PARA EL CASO CORREPONDIENTE
             var daycareValue = parseInt($('#daycareVal').val());
             console.log("guarderia: " + daycareValue);
 
@@ -81,7 +104,7 @@ $(function() {
 
             var serviceValue = 0;
 
-            var cost = 0;
+            var cost = 0, servtime = "";
 
             switch (service) {
                 case 1:
@@ -90,14 +113,17 @@ $(function() {
                     if (size >= 3) {
                         cost = cost + 10;
                     }
+                    servtime = serviceValue + " minutos";
+                    detalles = "Descanso para agua<br>Snack al terminar.";
                     break;
                 case 2:
                     serviceValue = daycareValue;
                     cost = 40 + (size * 20);
                     if (size == 4) {
-                        var cost = 0;
                         cost = cost - 10;
                     }
+                    servtime = serviceValue + " horas";
+                    detalles = "Sesión de actividades al aire.<br>Hora de comida.";
                     break;
                 case 3:
                     serviceValue = hotelValue;
@@ -106,9 +132,10 @@ $(function() {
                         cost = cost - 10;
                     }
                     cost = cost * hotelValue;
+                    servtime = serviceValue + " noches";
+                    detalles = "Sesión de actividades al aire.<br>2 comidas al día.<br>Libertad para dormir donde quiera.";
                     break;
             }
-            console.log(cost);
 
             //CARGA DE PARSE
             Parse.initialize("5MUjnjMwd8whYbxWY2pWqAv0QMZ3MHGStiMqRt3y", "T3cth1vnjqfGfC8VWNqf5R9Lyvp6QzDzTEk3DqdF");
@@ -123,13 +150,30 @@ $(function() {
             cons.set("serviceValue", serviceValue);
 
             cons.save().then(function(u) {
-                $('#alertCons').html('<div class="alert alert-success" role="alert" style="padding: 8px 16px;">Gracias por tu interés. La cotización es de $' + cost + '.00</div>');
+                $('#modalcontent').html('<table class="table table-striped"><tbody>' +
+                                        '<tr><td>Servicio</td><td>' + serv + '</td></tr>' +
+                                        '<tr><td>Duración</td><td>' + servtime + '</td></tr>' +
+                                        '<tr><td>Mascota</td><td>' + tam + '</td></tr>' +
+                                        '<tr><td>Detalles</td><td>' + detalles + '</td></tr>' +
+                                        '<tr><td>Total</td><td><strong>$' + cost + '.00</strong></td></tr>' +
+                                        '</tbody></table><hr>' +
+                                        '<button id="closeBtn" class="btn btn-block btn-default btn-lg">GRACIAS</button>' +
+                                        '<a href="#" class="btn btn-block btn-default btn-lg">¡QUIERO COMPRAR!</a>');
+                $('#closeBtn').on('click', function (e) {
+                    $('#modalCost').modal('toggle');
+                });
             }, function(error) {
-                $('#alertCons').html('<div class="alert alert-danger" role="alert" style="padding: 8px 16px;">Hubo un problema en la conexión, vuelve a intentarlo más tarde.</div>');
             });
 
         } else {
-            $('#alertCons').html('<div class="alert alert-danger" role="alert" style="padding: 8px 16px;">Debes llenar todos los campos para cotizar.</div>');
+            $('#modaltitle').html('<h3>No tenemos toda la información</h3>');
+            $('#modalcontent').html('<p>Debes completar el formulario para consultar los servicios.</p>' +
+                                    '<button id="closeBtn" class="btn btn-block btn-default btn-lg">Regresar</button>');
+            $('#modalCost').modal('toggle');
+            
+            $('#closeBtn').on('click', function (e) {
+                $('#modalCost').modal('toggle');
+            });
         }
 
     });
